@@ -8,7 +8,7 @@ services:
     - DB_PASS=password
     - DB_NAME=redmine_production
     volumes:
-    - /volume1/docker/redmine/postgresql:/var/lib/postgresql
+    - /docker/redmine/postgresql:/var/lib/postgresql
 
   redmine:
     build: ./
@@ -60,4 +60,4 @@ services:
     ports:
     - "10083:80"
     volumes:
-    - /volume1/docker/redmine/redmine:/home/redmine/data
+    - /docker/redmine/redmine:/home/redmine/data
